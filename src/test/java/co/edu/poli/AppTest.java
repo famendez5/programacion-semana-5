@@ -29,4 +29,49 @@ class AppTest {
 		assertEquals(TipoTriangulo.ISOSCELES, App.tipoTriangulo(30, 10, 30));
 		assertEquals(TipoTriangulo.ESCALENO, App.tipoTriangulo(20, 30, 8));
 	}
+
+	@Test
+	void testJuegoDeDardos() {
+		assertEquals(15, App.juegoDeDardos(-0.2f, 0.9f));
+		assertEquals(15, App.juegoDeDardos(0, 1));
+
+		assertEquals(9, App.juegoDeDardos(1.2f, 1.6f));
+		assertEquals(9, App.juegoDeDardos(0.63f, 1.2f));
+
+		assertEquals(5, App.juegoDeDardos(2.8f, -2.24f));
+		assertEquals(5, App.juegoDeDardos(1.1f, 2.43f));
+
+		assertEquals(2, App.juegoDeDardos(-3.71f, -3.9f));
+		assertEquals(2, App.juegoDeDardos(3.2f, -2.4f));
+
+		assertEquals(1, App.juegoDeDardos(4.18f, -4.45f));
+		assertEquals(1, App.juegoDeDardos(0.25f, 4.2f));
+
+		assertEquals(0, App.juegoDeDardos(7.2f, 1.4f));
+	}
+
+	@Test
+	void testDistanciaAlBorde() {
+		assertEquals(2, App.distanciaAlBorde(8, 6, 10, 10));
+		assertEquals(2, App.distanciaAlBorde(2, 6, 10, 10));
+		assertEquals(4, App.distanciaAlBorde(5, 4, 10, 10));
+	}
+
+	@Test
+	void testEncuentroEnLaUniversidad() {
+		assertEquals(6, App.encuentroEnLaUniversidad(1, 2, 3));
+		assertEquals(12, App.encuentroEnLaUniversidad(4, 3, 2));
+	}
+
+	@Test
+	void testEsPrimo() {
+		assertFalse(App.esPrimo(1));
+		assertTrue(App.esPrimo(2));
+		assertTrue(App.esPrimo(3));
+		assertFalse(App.esPrimo(4));
+		assertTrue(App.esPrimo(5));
+		assertTrue(App.esPrimo(7));
+		assertFalse(App.esPrimo(81));
+		assertFalse(App.esPrimo(120));
+	}
 }

@@ -31,6 +31,91 @@ public class App {
 
 		return TipoTriangulo.ESCALENO;
 	}
+
+	public static int juegoDeDardos(float x, float y) {
+		x = valorAbsoluto(x);
+		y = valorAbsoluto(y);
+
+		float max = x > y ? x : y;
+
+		// Rojo
+		if (max <= 1) {
+			return 15;
+		}
+
+		// Naranja
+		if (max <= 2) {
+			return 9;
+		}
+
+		// Amarillo
+		if (max <= 3) {
+			return 5;
+		}
+
+		// Verde
+		if (max <= 4) {
+			return 2;
+		}
+
+		// Azul
+		if (max <= 5) {
+			return 1;
+		}
+
+		return 0;
+	}
+
+	public static int distanciaAlBorde(int x, int y, int a, int b) {
+		int min = x;
+
+		if (y < min) {
+			min = y;
+		}
+		if (a - x < min) {
+			min = a - x;
+		}
+
+		if (b - y < min) {
+			min = b - y;
+		}
+
+		return min;
+	}
+
+	public static int encuentroEnLaUniversidad(int a, int b, int c) {
+		int i = 0;
+
+		do {
+			i++;
+		} while (i % a != 0 || i % b != 0 || i % c != 0);
+
+		return i;
+	}
+
+	public static boolean esPrimo(int n) {
+		if (n <= 1) {
+			return false;
+		}
+
+		if (n == 2) {
+			return true;
+		}
+
+		if (n % 2 == 0) {
+			return false;
+		}
+
+		int limite = (int) Math.sqrt(n);
+
+		for (int i = 3; i < limite; i += 2) {
+			if (n % i == 0) {
+				return false;
+			}
+		}
+
+		return true;
+	}
 }
 
 enum TipoTriangulo {
