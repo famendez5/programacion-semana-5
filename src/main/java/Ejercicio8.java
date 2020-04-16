@@ -4,7 +4,12 @@ public class Ejercicio8 {
 
 	public static void main(String[] args) {
 		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Ingrese un numero natural par mayor que 2: ");
+			int numero = scanner.nextInt();
 
+			int[] primos = conjeturaDeGoldbach(numero);
+
+			System.out.println("El numero " + numero + " puede expresarse como la suma de los numeros primos " + primos[0] + " y " + primos[1]);
 		}
 	}
 

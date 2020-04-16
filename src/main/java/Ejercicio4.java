@@ -4,7 +4,13 @@ public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Ingrese la posicion x del dardo: ");
+			float x = scanner.nextFloat();
 
+			System.out.print("Ingrese la posicion y del dardo: ");
+			float y = scanner.nextFloat();
+
+			System.out.println("El puntaje obtenido es: " + juegoDeDardos(x, y));
 		}
 	}
 
