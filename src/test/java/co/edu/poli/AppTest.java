@@ -13,4 +13,11 @@ class AppTest {
     	assertEquals(5, App.valorAbsoluto(-5));
     	assertEquals(7.5f, App.valorAbsoluto(-7.5f));
     }
+
+    @Test
+    void testEsPar() {
+    	assertTrue(App.esPar(2));
+    	assertTrue(App.esPar(-10));
+    	assertFalse(App.esPar(13));
+    }
 }
