@@ -4,9 +4,9 @@
 package co.edu.poli;
 
 public class App {
-    public static void main(String[] args) {
-    	
-    }
+	public static void main(String[] args) {
+
+	}
 
 	public static float valorAbsoluto(float numero) {
 		if (numero < 0) {
@@ -19,4 +19,20 @@ public class App {
 	public static boolean esPar(int numero) {
 		return numero % 2 == 0;
 	}
+
+	public static TipoTriangulo tipoTriangulo(float ladoA, float ladoB, float ladoC) {
+		if (ladoA == ladoB && ladoB == ladoC) {
+			return TipoTriangulo.EQUILATERO;
+		}
+
+		if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) {
+			return TipoTriangulo.ISOSCELES;
+		}
+
+		return TipoTriangulo.ESCALENO;
+	}
+}
+
+enum TipoTriangulo {
+	EQUILATERO, ISOSCELES, ESCALENO
 }

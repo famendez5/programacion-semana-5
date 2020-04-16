@@ -7,17 +7,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test
-    void testValorAbsoluto() {
-    	assertEquals(10, App.valorAbsoluto(10));
-    	assertEquals(5, App.valorAbsoluto(-5));
-    	assertEquals(7.5f, App.valorAbsoluto(-7.5f));
-    }
+	@Test
+	void testValorAbsoluto() {
+		assertEquals(10, App.valorAbsoluto(10));
+		assertEquals(5, App.valorAbsoluto(-5));
+		assertEquals(7.5f, App.valorAbsoluto(-7.5f));
+	}
 
-    @Test
-    void testEsPar() {
-    	assertTrue(App.esPar(2));
-    	assertTrue(App.esPar(-10));
-    	assertFalse(App.esPar(13));
-    }
+	@Test
+	void testEsPar() {
+		assertTrue(App.esPar(2));
+		assertTrue(App.esPar(-10));
+		assertFalse(App.esPar(13));
+	}
+
+	@Test
+	void testTipoTriangulo() {
+		assertEquals(TipoTriangulo.EQUILATERO, App.tipoTriangulo(10, 10, 10));
+		assertEquals(TipoTriangulo.ISOSCELES, App.tipoTriangulo(5, 10, 10));
+		assertEquals(TipoTriangulo.ISOSCELES, App.tipoTriangulo(15, 15, 15.5f));
+		assertEquals(TipoTriangulo.ISOSCELES, App.tipoTriangulo(30, 10, 30));
+		assertEquals(TipoTriangulo.ESCALENO, App.tipoTriangulo(20, 30, 8));
+	}
 }
