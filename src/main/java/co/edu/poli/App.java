@@ -4,11 +4,15 @@
 package co.edu.poli;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+    public static void main(String[] args) {
+    	
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+	public static float valorAbsoluto(float numero) {
+		if (numero < 0) {
+			return -numero;
+		}
+
+		return numero;
+	}
 }

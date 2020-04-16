@@ -7,8 +7,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    void testValorAbsoluto() {
+    	assertEquals(10, App.valorAbsoluto(10));
+    	assertEquals(5, App.valorAbsoluto(-5));
+    	assertEquals(7.5f, App.valorAbsoluto(-7.5f));
     }
 }
