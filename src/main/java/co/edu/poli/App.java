@@ -116,6 +116,26 @@ public class App {
 
 		return true;
 	}
+
+	public static int[] conjeturaDeGoldbach(int numero) {
+		for (int i = 2; i < numero; i++) {
+			if (!esPrimo(i)) {
+				continue;
+			}
+
+			for (int j = 2; j < numero; j++) {
+				if (!esPrimo(j)) {
+					continue;
+				}
+
+				if (i + j == numero) {
+					return new int[] { i, j };
+				}
+			}
+		}
+
+		return null;
+	}
 }
 
 enum TipoTriangulo {

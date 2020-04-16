@@ -74,4 +74,12 @@ class AppTest {
 		assertFalse(App.esPrimo(81));
 		assertFalse(App.esPrimo(120));
 	}
+
+	@Test
+	void testConjeturaDeGoldbach() {
+		assertArrayEquals(new int[] {2, 2}, App.conjeturaDeGoldbach(4));
+		assertArrayEquals(new int[] {3, 3}, App.conjeturaDeGoldbach(6));
+		assertArrayEquals(new int[] {3, 5}, App.conjeturaDeGoldbach(8));
+		assertArrayEquals(new int[] {7, 1193}, App.conjeturaDeGoldbach(1200));
+	}
 }
