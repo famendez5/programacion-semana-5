@@ -27,5 +27,5 @@ jobs:
     - name: Upload source code
       uses: actions/upload-artifact@v1
       with:
-        name: Entrega_2_Fabian_Arley_Mendez_Farfan_1921021224
+        name: Entrega_2_Grupo_1
         path: src/main/java/
