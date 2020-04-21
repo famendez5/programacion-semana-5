@@ -4,7 +4,15 @@ public class Ejercicio7 {
 
 	public static void main(String[] args) {
 		try (Scanner scanner = new Scanner(System.in)) {
-			
+			System.out.print("Ingrese un numero: ");
+
+			int numero = scanner.nextInt();
+
+			if (esPrimo(numero)) {
+				System.out.println("El numero ingresado es primo");
+			} else {
+				System.out.println("El numero ingresado no es primo");
+			}
 		}
 	}
 
